@@ -1,6 +1,20 @@
 #include <iostream>
 
 using namespace std;
+Class BMW_Car : public Car {
+    private:
+    string m_DriveMode;
+    
+    public:
+    BMW_Car(string y, int z, int s):Car("bmw",y,z,s){
+        cout << "Constructing BMW_Car\n";
+        m_DriveMode = "Rear-wheel";
+    }
+    
+    string get_Drive_Mode(){
+        return m_DriveMode;
+    }
+};
 
 int main()
 {
